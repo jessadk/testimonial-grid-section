@@ -1,0 +1,115 @@
+$violet: hsl(263, 55%, 52%);
+$dark-grey-blue: hsl(217, 19%, 35%);
+$dark-black-blue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+$white-opacity-5: hsla(0, 0%, 100%, .5);
+
+$light-grey: hsl(0, 0%, 81%);
+$light-grey-blue: hsl(210, 46%, 95%);
+
+$font-stack: 'Barlow Semi Condensed', sans-serif;
+
+@mixin testimonial-bg-text {
+    background-color: $white;
+    color: $dark-grey-blue;
+    &.violet-bg {
+        background: $violet;
+        color: $white;
+    }
+    &.dark-black-blue-bg {
+        background-color: $dark-black-blue;
+        color: $white;
+    }
+    &.dark-grey-blue-bg {
+        background-color: $dark-grey-blue;
+        color: $white;
+    }
+}
+
+@mixin border {
+    &.violet-border-light {
+        border: 2px solid $white-opacity-5;
+    }
+    &.violet-border-dark {
+        border: 2px solid $violet;
+    }
+}
+
+/* BASE STYLES */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $light-grey-blue;
+    font: 500 13px/150% $font-stack;
+}
+
+img {
+    margin-right: 17px;
+    border-radius: 50%;
+    @include border;
+    height: 30px;
+    width: 30px;
+}
+
+h6 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.author-credentials {
+    line-height: 125%;
+    p {
+        opacity: .5;
+    }
+}
+
+.testimonial-statement {
+    font: 600 20px/125% $font-stack;
+}
+
+blockquote {
+    opacity: .7;
+}
+
+/* CONTAINER STYLES */
+
+.testimonial-container {
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 24px;
+    margin-top: 24px;
+    max-width: 325px;
+}
+
+/* COMPONENT STYLES */
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    border-radius: 10px;
+    padding: 24px 35px 30px 30px;
+    @include testimonial-bg-text;
+    &-author{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.quote-bg {
+    position: relative;
+    z-index: -2;
+    svg {
+        position: absolute;
+        top: 0;
+        right: 8%;
+        z-index: -1;
+    }
+}
+
+/* MEDIA QUERIES - 375px and above */

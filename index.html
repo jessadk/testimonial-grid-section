@@ -2,25 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
   
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Jesse Adkins</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-  <main class="testimonial-wrapper">
-    <article class="testimonial">
+  <main class="testimonial-container">
+    <article class="testimonial violet-bg quote-bg">
+      <svg width="104" height="102" xmlns="http://www.w3.org/2000/svg"><path d="M104 102V59.727H84.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C95.01 25.86 98.909 22.257 104 19.375V0c-9.758 4.27-17.712 9.874-23.864 16.813-6.151 6.939-10.712 14.545-13.681 22.818C63.485 47.904 62 59.941 62 75.74V102h42zm-62 0V59.727H22.114c0-5.871.689-11.182 2.068-15.933 1.379-4.75 3.42-9.287 6.125-13.61C33.01 25.86 36.909 22.257 42 19.375V0c-9.652 4.27-17.58 9.874-23.784 16.813C12.01 23.752 7.424 31.358 4.455 39.631 1.485 47.904 0 59.941 0 75.74V102h42z" fill="#A775F1" fill-rule="nonzero"/></svg>
       <section class="testimonial-author">
-        <img src="images/image-daniel.jpg" alt="">
-        <h6>Daniel Clifford</h6>
-        <p>Verified Graduate</p>
+        <img class="violet-border-light" src="images/image-daniel.jpg" alt="">
+        <section class="author-credentials">
+          <h6>Daniel Clifford</h6>
+          <p>Verified Graduate</p>
+        </section>
       </section>
       
       <p class="testimonial-statement">I received a job offer mid-course, and the subjects I learned were current, if not more so, 
@@ -33,11 +40,13 @@
       the course, I've successfully switched careers, working as a Software Engineer at a VR startup. ”</blockquote>
     </article>
 
-    <article class="testimonial">
+    <article class="testimonial dark-grey-blue-bg">
       <section class="testimonial-author">
         <img src="images/image-jonathan.jpg" alt="">
-        <h6>Jonathan Walters</h6>
-        <p>Verified Graduate</p>
+        <section class="author-credentials">
+          <h6>Jonathan Walters</h6>
+          <p>Verified Graduate</p>
+        </section>
       </section>
 
       <p class="testimonial-statement">The team was very supportive and kept me motivated</p>
@@ -49,8 +58,10 @@
     <article class="testimonial">
       <section class="testimonial-author">
         <img src="images/image-jeanette.jpg" alt="">
-        <h6>Jeanette Harmon</h6>
-        <p>Verified Graduate</p>
+        <section class="author-credentials">
+          <h6>Jeanette Harmon</h6>
+          <p>Verified Graduate</p>
+        </section>
       </section>
       <p class="testimonial-statement">An overall wonderful and rewarding experience</p>
 
@@ -58,11 +69,13 @@
       while doing something I love. ”</blockquote>
     </article>
 
-    <article class="testimonial">
+    <article class="testimonial dark-black-blue-bg">
       <section class="testimonial-author">
-        <img src="images/image-patrick.jpg" alt="">
-        <h6>Patrick Abrams</h6>
-        <p>Verified Graduate</p>
+        <img class="violet-border-dark" src="images/image-patrick.jpg" alt="">
+        <section class="author-credentials">
+          <h6>Patrick Abrams</h6>
+          <p>Verified Graduate</p>
+        </section>
       </section>
 
       <p class="testimonial-statement">Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and 
@@ -77,8 +90,10 @@
     <article class="testimonial">
       <section class="testimonial-author">
         <img src="images/image-kira.jpg" alt="">
-        <h6>Kira Whittle</h6>
-        <p>Verified Graduate</p>
+        <section class="author-credentials">
+          <h6>Kira Whittle</h6>
+          <p>Verified Graduate</p>
+        </section>
       </section>
       <p class="testimonial-statement">Such a life-changing experience. Highly recommended!</p>
 
