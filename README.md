@@ -1,6 +1,6 @@
 # Frontend Mentor - Testimonials grid section solution
 
-![](./design/desktop-preview-screenshot.png)
+![](design/desktop-preview-screenshot.png)
 
 ## Table of contents
 
