@@ -1,0 +1,25 @@
+@mixin testimonial-bg-text {
+    background-color: $white;
+    color: $dark-grey-blue;
+    &.violet-bg {
+        background: $violet;
+        color: $white;
+    }
+    &.dark-black-blue-bg {
+        background-color: $dark-black-blue;
+        color: $white;
+    }
+    &.dark-grey-blue-bg {
+        background-color: $dark-grey-blue;
+        color: $white;
+    }
+}
+
+@mixin border {
+    &.violet-border-light {
+        border: 2px solid $white-opacity-5;
+    }
+    &.violet-border-dark {
+        border: 2px solid $violet;
+    }
+}

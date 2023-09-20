@@ -1,41 +1,8 @@
-$violet: hsl(263, 55%, 52%);
-$dark-grey-blue: hsl(217, 19%, 35%);
-$dark-black-blue: hsl(219, 29%, 14%);
-$white: hsl(0, 0%, 100%);
-$white-opacity-5: hsla(0, 0%, 100%, .5);
+@import 'partials/variables',
+        'partials/mixins';
 
-$light-grey: hsl(0, 0%, 81%);
-$light-grey-blue: hsl(210, 46%, 95%);
 
-$font-stack: 'Barlow Semi Condensed', sans-serif;
-
-@mixin testimonial-bg-text {
-    background-color: $white;
-    color: $dark-grey-blue;
-    &.violet-bg {
-        background: $violet;
-        color: $white;
-    }
-    &.dark-black-blue-bg {
-        background-color: $dark-black-blue;
-        color: $white;
-    }
-    &.dark-grey-blue-bg {
-        background-color: $dark-grey-blue;
-        color: $white;
-    }
-}
-
-@mixin border {
-    &.violet-border-light {
-        border: 2px solid $white-opacity-5;
-    }
-    &.violet-border-dark {
-        border: 2px solid $violet;
-    }
-}
-
-/* BASE STYLES */
+/*** Base Styles ***/
 
 body {
     display: flex;
@@ -75,7 +42,7 @@ blockquote {
     opacity: .7;
 }
 
-/* CONTAINER STYLES */
+/*** Testimonials Container Styles ***/
 
 .testimonial-container {
     display: grid;
@@ -85,7 +52,7 @@ blockquote {
     max-width: 325px;
 }
 
-/* COMPONENT STYLES */
+/*** Testimonial Component Styles ***/
 
 .testimonial {
     display: flex;
@@ -112,4 +79,40 @@ blockquote {
     }
 }
 
-/* MEDIA QUERIES - 375px and above */
+/* Media Queries */
+
+@media (min-width: $break-sm) {
+    .testimonial-container {
+        max-width: 90%;
+    }
+}
+
+@media (min-width: $break-md) {
+    .testimonial-container {
+        max-width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        .col-2 {
+            grid-column: span 2;
+        }
+        
+        .row-2 {
+            grid-column: span 3;
+        }
+    }
+}
+
+@media (min-width: $break-lg) {
+    .testimonial-container {
+        margin: 0 24px;
+        max-width: 1110px;
+        grid-template-columns: repeat(4, 1fr);
+        .col-2 {
+            grid-column: span 2;
+        }
+        .row-2 {
+            grid-column: 4;
+            grid-row: 1 / 3;
+        }
+    }
+}
+
